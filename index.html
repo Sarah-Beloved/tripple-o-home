@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Triple O Homes | Buy, Sell, Rent & Consult</title>
   <meta name="description" content="Triple O Homes - Your trusted real estate partner for buying, selling, and renting properties.">
-  <link rel="stylesheet" href="styles.css">  
+<link rel="stylesheet" href="styles.css">  
 </head>
-
 <body>
+
   <!-- ===== Header ===== -->
   <header>
     <div class="logo">
@@ -25,47 +25,93 @@
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
+   <div class="user-actions">
+  <a href="login.html"><button>Log In</button></a>
+  <a href="signup.html"><button>Sign Up</button></a>
+</div>
+
   </header>
 
-  <!-- ===== Hero Section ===== -->
-  <section class="hero">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triple O Homes | Real Estate</title>
+</head>
+<body>
+
+    <!-- Hero Section -->
+  <section>
     <h2>Your Dream Home Awaits</h2>
     <p>Buy, sell, or rent your ideal home with ease and confidence through Triple O Homes — where trust meets comfort.</p>
-    <button id="exploreBtn">Explore Properties</button>
   </section>
 
-  <!-- ===== Why Choose Us ===== -->
-  <section class="why-us">
+  <!-- Why Choose Us -->
+  <section>
     <h2>Why Choose Triple O Homes?</h2>
     <p>At Triple O Homes, we make homeownership simple, flexible, and rewarding. Whether you're buying, selling, or renting, our system ensures affordability, security, and transparency every step of the way.</p>
   </section>
 
-  <!-- ===== Features Section ===== -->
-  <section class="features">
+  <!-- Features Section -->
+  <section>
     <div>
       <h3>🏠 Affordable</h3>
       <p>Only 10% deposit required to secure your home.</p>
     </div>
+
     <div>
       <h3>💳 Flexible</h3>
       <p>Spread your payments across up to 60 months.</p>
     </div>
+
     <div>
       <h3>🔐 Secure</h3>
       <p>All properties backed by trusted documents and verification.</p>
     </div>
+
     <div>
       <h3>🚪 Move in Early</h3>
       <p>Start living once you've paid 50% of your home value.</p>
     </div>
   </section>
 
-  <!-- ===== Footer ===== -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Triple O Homes. All rights reserved.</p>
   </footer>
 
-  <!-- ===== JavaScript Link ===== -->
-  <script src="scripts.js"></script>
+  <!-- ===== Auth Modal ===== -->
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeAuth">&times;</span>
+
+      <!-- Log In Form -->
+      <form id="loginForm">
+        <h2>Log In</h2>
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" required>
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" required>
+        <button type="submit">Log In</button>
+        <p>Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+      </form>
+
+      <!-- Sign Up Form -->
+      <form id="signupForm" style="display:none;">
+        <h2>Sign Up</h2>
+        <label for="signupName">Full Name</label>
+        <input type="text" id="signupName" required>
+        <label for="signupEmail">Email</label>
+        <input type="email" id="signupEmail" required>
+        <label for="signupPassword">Password</label>
+        <input type="password" id="signupPassword" required>
+        <button type="submit">Sign Up</button>
+        <p>Already have an account? <a href="#" id="switchToLogin">Log In</a></p>
+      </form>
+    </div>
+  </div>
+
+<script src="script.js"></script>
 </body>
 </html>
