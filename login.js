@@ -1,8 +1,8 @@
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  const email = document.getElementById("loginEmail").value;
+  const password = document.getElementById("loginPassword").value;
 
   try {
     const res = await fetch("http://localhost:5000/api/auth/login", {
@@ -14,10 +14,9 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     const data = await res.json();
 
     if (res.ok) {
-      alert("Login successful! Token: " + data.token);
-      // store token in localStorage/sessionStorage if needed
-      localStorage.setItem("authToken", data.token);
-      window.location.href = "index.html"; // redirect to home
+      alert("Login successful!");
+      localStorage.setItem("authToken", data.token); 
+      window.location.href = "index.html"; 
     } else {
       alert(data.msg || "Invalid credentials");
     }

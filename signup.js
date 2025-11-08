@@ -1,9 +1,9 @@
 document.getElementById("signupForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  const name = document.getElementById("signupName").value;
+  const email = document.getElementById("signupEmail").value;
+  const password = document.getElementById("signupPassword").value;
 
   try {
     const res = await fetch("http://localhost:5000/api/auth/signup", {
@@ -15,8 +15,8 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
     const data = await res.json();
 
     if (res.ok) {
-      alert("Signup successful! Token: " + data.token);
-      window.location.href = "login.html"; // redirect to login
+      alert("Signup successful!");
+      window.location.href = "login.html";
     } else {
       alert(data.msg || "Error signing up");
     }
